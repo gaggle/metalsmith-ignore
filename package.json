@@ -11,7 +11,7 @@
   "devDependencies": {
     "mocha": "1.x",
     "metalsmith": "0.x",
-    "assert-dir-equal": "^0.1.0",
+    "assert-dir-equal": "git+https://github.com/gaggle/assert-dir-equal.git#allow-filter-function",
     "rimraf": "^2.2.6"
   }
 }

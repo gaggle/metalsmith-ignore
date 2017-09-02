@@ -37,4 +37,14 @@ describe('metalsmith-ignore', function(){
       done();
     });
   });
+
+  it('should ignore all files in folders', function(done){
+    rm('test/fixtures/folders/build');
+    var m = Metalsmith('test/fixtures/folders').use(ignore(['removed/']));
+    m.build(function(err){
+      if (err) return done(err);
+      equal('test/fixtures/folders/build', 'test/fixtures/folders/expected', {filter: () => true});
+      done();
+    });
+  });
 });
